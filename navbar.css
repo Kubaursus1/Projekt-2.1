@@ -1,0 +1,335 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+}
+.navbar > div.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: flex-start;
+}
+.navbar > div.logo > img {
+  width: 9rem;
+  height: 5rem;
+}
+.navbar > div.logo > .ark {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+.navbar > div.selection > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}
+.navbar > div.selection > ul > li {
+  border-radius: 1rem;
+}
+.navbar > div.selection > ul > li > a {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  padding: 5px;
+}
+.navbar > .selection > ul > li > a > img {
+  width: 2rem;
+  height: 2rem;
+}
+.navbar > .selection > ul > li > a > span {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+.navbar > div.selection > ul > li:first-child {
+  background: rgba(17, 128, 219, var(--opacity1));
+}
+.navbar > div.events > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 10px;
+}
+.navbar > div.events > ul > span.event {
+  padding: 5px;
+  color: lightgray;
+}
+.navbar > div.events > ul > li {
+  border-radius: 1rem;
+}
+.navbar > div.events > ul > li > a {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+  padding: 5px;
+}
+.navbar > .events > ul > li > a > img {
+  width: 2rem;
+  height: 2rem;
+}
+.navbar > .events > ul > li > a > span {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+.navbar > .events > ul > li:last-child > a > span:last-child {
+  background-color: var(--color2);
+  padding: 5px 9px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 1rem;
+}
+div.profile {
+  display: flex;
+  align-items: center;
+  background: rgba(245, 245, 245, var(--opacity1));
+  flex-direction: column;
+  width: 9rem;
+  height: 9rem;
+  margin-left: 1.25rem;
+  border-radius: 10%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2rem;
+}
+div.profile > img {
+  border-radius: 100%;
+  max-width: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+div.profile > h1 {
+  margin: 0.5rem;
+  font-size: 0.85rem;
+  color: black;
+}
+div.profile > div.my.account {
+  background: rgba(128, 128, 128, var(--opacity1));
+  padding: 5px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+div.profile > div.my.account > a {
+  color: black;
+  padding: 0px 20px;
+}
+.navbar > div.selection > ul > li:not(:first-child) > a:hover,
+.navbar > div.events > ul > li > a:hover {
+  transform: scale(1.09);
+  transition: 0.13s;
+  background: rgba(135, 206, 250, var(--opacity1));
+  border-radius: 1rem;
+}
+.navbar > div.selection > ul > li:first-child:hover {
+  transform: scale(1.06);
+  transition: 0.13s;
+  background: rgba(4, 75, 133, var(--opacity1));
+}
+.navbar > div.selection > ul > li:active,
+div.events > ul > li:active {
+  transform: scale(0.9);
+  transition: 0.1s;
+  opacity: 90%;
+}
+.navbar > div.selection > ul > li:first-child:active {
+  transform: scale(1);
+}
+div.profile > div.my.account:hover {
+  transform: scale(1.075);
+  transition: 0.2s;
+}
+div.profile > div.my.account:active {
+  transform: scale(0.955);
+  opacity: 95%;
+}
+@media (max-width: 1300px) {
+  .navbar > .selection > ul > li > a > span,
+  .navbar > div.logo > .ark,
+  .navbar > .events > ul > li > a > span,
+  .navbar > .events > ul > li:last-child > a > span:last-child {
+    font-size: 1.1rem;
+  }
+  .navbar > div.logo > img {
+    width: 8rem;
+    height: 4rem;
+  }
+  .navbar > .selection > ul > li > a > img,
+  .navbar > .events > ul > li > a > img {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .navbar > div.events > ul > span.event {
+    font-size: 85%;
+  }
+  div.profile {
+    width: 8rem;
+    height: 8rem;
+  }
+  div.profile > img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  div.profile > h1 {
+    font-size: 0.7rem;
+  }
+  div.profile > div.my.account > a {
+    font-size: 80%;
+  }
+}
+@media (max-width: 1030px) {
+  .navbar > .selection > ul > li > a > span,
+  .navbar > div.logo > .ark,
+  .navbar > .events > ul > li > a > span,
+  .navbar > .events > ul > li:last-child > a > span:last-child {
+    font-size: 0.9rem;
+  }
+  .navbar > div.logo > img {
+    width: 6rem;
+    height: 3.5rem;
+  }
+  .navbar > .selection > ul > li > a > img,
+  .navbar > .events > ul > li > a > img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .navbar > div.events > ul > span.event {
+    font-size: 70%;
+  }
+  div.profile {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  div.profile > img {
+    height: 2rem;
+    width: 2rem;
+    margin-top: 13px;
+  }
+  div.profile > h1 {
+    font-size: 0.55rem;
+  }
+  div.profile > div.my.account > a {
+    font-size: 55%;
+  }
+}
+@media (max-width: 900px) {
+  .navbar > div.logo > .ark {
+    font-size: 0.7rem;
+  }
+  div.profile {
+    position: static;
+  }
+}
+@media (max-width: 780px) {
+  .navbar > div.logo {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar > div.logo > .ark {
+    display: none;
+  }
+  .navbar > .selection > ul > li > a > span,
+  .navbar > .events > ul > li > a > span {
+    font-size: 0.7rem;
+  }
+  .navbar > .events > ul > li:last-child > a > span:last-child {
+    font-size: 0.7rem;
+    padding: 2px 5px;
+  }
+  .navbar > div.logo > img {
+    width: 6rem;
+    height: 3.5rem;
+  }
+  .navbar > .selection > ul > li > a > img,
+  .navbar > .events > ul > li > a > img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .navbar > div.events > ul > span.event {
+    font-size: 55%;
+  }
+  div.profile {
+    width: 5.5rem;
+    height: 5.5rem;
+    position: static;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+  }
+  div.profile > img {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0;
+    margin-top: 10px;
+  }
+  div.profile > h1 {
+    font-size: 0.4rem;
+  }
+  div.profile > div.my.account > a {
+    font-size: 40%;
+    padding: 0px 10px;
+  }
+}
+@media (max-width: 476px) {
+  .navbar > div.logo {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar > div.logo > .ark {
+    display: none;
+  }
+  .navbar > .selection > ul > li > a > span,
+  .navbar > .events > ul > li > a > span,
+  .navbar > .events > ul > li:last-child > a > span:last-child {
+    font-size: 0.5rem;
+  }
+  .navbar > div.selection > ul > li > a,
+  .navbar > div.events > ul > li > a {
+    gap: 0.25rem;
+  }
+  .navbar > div.logo > img {
+    width: 5rem;
+    height: 3rem;
+  }
+  .navbar > .selection > ul > li > a > img,
+  .navbar > .events > ul > li > a > img {
+    width: 1rem;
+    height: 1rem;
+  }
+  .navbar > div.events > ul > span.event {
+    font-size: 45%;
+  }
+  div.profile {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: 0.5rem;
+    position: static;
+  }
+  div.profile > img {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0;
+    margin-top: 5px;
+  }
+  div.profile > h1 {
+    font-size: 0.4rem;
+  }
+  div.profile > div.my.account > a {
+    font-size: 40%;
+    padding: 0px 10px;
+  }
+}
+/*test 1*/

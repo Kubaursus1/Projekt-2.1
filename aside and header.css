@@ -1,0 +1,179 @@
+header {
+  display: flex;
+  flex-direction: row;
+  height: 9vh;
+  align-items: center;
+  padding-right: 2px;
+  width: 80vw;
+  justify-content: space-between;
+}
+header > div.two.first {
+  display: flex;
+}
+header > div.two.first > div.back > a,
+div.delete > a {
+  background: rgba(4, 75, 133, var(--opacity1));
+  margin: 10px;
+  padding: 8px 20px;
+  border-radius: 0.75rem;
+  font-size: 1.25rem;
+  display: flex;
+}
+header > div.two.first > div.back > a,
+div.delete > a,
+.outer {
+  border: 1.5px solid rgba(17, 128, 219, var(--opacity1));
+}
+header > .outer {
+  background: rgba(4, 75, 133, var(--opacity1));
+  border-radius: 1.25rem;
+  padding: 6px 15px;
+  margin-right: 20px;
+}
+header > .outer > .inner {
+  background-color: black;
+  border: 2px solid white;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+header > .outer > .inner > a {
+  font-size: 1rem;
+  display: flex;
+  align-self: flex-end;
+}
+aside {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  padding-top: 10px;
+}
+aside > div.choosing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+aside > div.choosing > span {
+  color: var(--color2);
+}
+aside > div.choosing > span::after,
+aside > div.choosing > span::before {
+  content: " - ";
+}
+aside > div.choosing > div.types {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.75rem;
+}
+aside > div.choosing > div.types > div.single,
+aside > div.choosing > div.types > div.non {
+  background: rgba(255, 165, 0, 70%);
+  padding: 8px 20px;
+  border-radius: 1rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+aside > div.choosing > div.types > div.single:hover,
+aside > div.choosing > div.types > div.non:hover {
+  transform: scale(1.07);
+  transition: 0.13s;
+}
+aside > div.choosing > div.types > div.single:active,
+aside > div.choosing > div.types > div.non:active {
+  transform: scale(0.98);
+  transition: 0.1s;
+}
+@media (max-width: 1300px) {
+  header > div.two.first > div.back > a,
+  div.delete > a {
+    font-size: 1rem;
+  }
+  header > .outer > .inner > a {
+    font-size: 0.8rem;
+  }
+  aside > div.choosing > span {
+    font-size: 85%;
+  }
+  aside > div.choosing > div.types > div.single > a,
+  aside > div.choosing > div.types > div.non > a {
+    font-size: 85%;
+  }
+}
+@media (max-width: 1030px) {
+  aside > div.choosing {
+    gap: 0.5rem;
+  }
+  aside > div.choosing > span {
+    font-size: 70%;
+  }
+  aside > div.choosing > div.types {
+    gap: 1.25rem;
+  }
+  aside > div.choosing > div.types > div.single,
+  aside > div.choosing > div.types > div.non {
+    padding: 5px 15px;
+  }
+  aside > div.choosing > div.types > div.single > a,
+  aside > div.choosing > div.types > div.non > a {
+    font-size: 70%;
+  }
+}
+@media (max-width: 900px) {
+  header {
+    height: 7vh;
+  }
+  header > div.two.first > div.back > a,
+  div.delete > a {
+    font-size: 0.8rem;
+    padding: 6px 15px;
+  }
+  header > .outer {
+    padding: 4px 13px;
+  }
+  header > .outer > .inner > a {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 750px) {
+  aside > div.choosing > span {
+    font-size: 60%;
+  }
+  aside > div.choosing > div.types {
+    gap: 1rem;
+  }
+  aside > div.choosing > div.types > div.single > a,
+  aside > div.choosing > div.types > div.non > a {
+    font-size: 60%;
+  }
+}
+@media (max-width: 476px) {
+  header {
+    height: 5.5vh;
+  }
+  header > div.two.first > div.back > a,
+  div.delete > a {
+    font-size: 0.6rem;
+    padding: 4px 12px;
+  }
+  header > .outer {
+    padding: 3px 10px;
+  }
+  header > .outer > .inner > a {
+    font-size: 0.4rem;
+  }
+  aside > div.choosing > span {
+    font-size: 50%;
+  }
+  aside > div.choosing > div.types {
+    gap: 0.75rem;
+  }
+  aside > div.choosing > div.types > div.single > a,
+  aside > div.choosing > div.types > div.non > a {
+    font-size: 50%;
+  }
+}
